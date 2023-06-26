@@ -94,4 +94,23 @@ RSpec.describe "Friends", type: :request do
       expect(friends.length).to eq 0
     end
   end
+
+  it "doesn't create a friend with activities shorter than 10 characters" do
+    friend_params = {
+      friend: {
+        name: 'Someone',
+        species: 'Tiger',
+        age: 2,
+        personality: 'quiet',
+        size: 'large',
+        diet: 'meat',
+        activities: 'Long',
+        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+      }
+    }
+    post '/friends', params: friend_params
+    expect(response.status).to eq 422
+    json = JSON.parse(response.body)
+    expect(json['activities']).to include "is too short (minimum is 10 characters)"
+  end
 end

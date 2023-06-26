@@ -7,7 +7,11 @@ class FriendsController < ApplicationController
   
     def create
         friend = Friend.create(friend_params)
-        render json: friend
+        if friend.valid?
+            render json: friend
+        else
+            render json: friend.errors, status: 422
+        end
     end
   
     def update
