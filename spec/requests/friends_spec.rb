@@ -75,7 +75,7 @@ RSpec.describe "Friends", type: :request do
       expect(updated_friend.age).to eq 3
     end
   end
-  describe "POST /create" do
+  describe "DElETE /destroy" do
     it "deletes a friend" do
       Friend.create(
         name: 'Felix',
