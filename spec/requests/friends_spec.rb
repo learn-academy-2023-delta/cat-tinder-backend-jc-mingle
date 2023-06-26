@@ -16,7 +16,6 @@ RSpec.describe "Friends", type: :request do
 
       # Make a request
       get '/friends'
-
       friend = JSON.parse(response.body)
       expect(response).to have_http_status(200)
       expect(friend.length).to eq 1
@@ -35,13 +34,10 @@ RSpec.describe "Friends", type: :request do
           diet: 'meat',
           activities: 'Long naps on the couch, and a warm fire.',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+        }
       }
-    }
       
-    post '/friends', params: friend_params
-
-      
-
+      post '/friends', params: friend_params
       friend = Friend.first
       expect(response).to have_http_status(200)
       expect(friend.name).to eq 'Felix'
@@ -69,14 +65,12 @@ RSpec.describe "Friends", type: :request do
           diet: 'meat',
           activities: 'Long naps on the couch, and a warm fire.',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+        }
       }
-    }
     
-    friend = Friend.first  
-    patch "/friends/#{friend.id}", params: friend_params
-    updated_friend = Friend.first
-
-      
+      friend = Friend.first  
+      patch "/friends/#{friend.id}", params: friend_params
+      updated_friend = Friend.first
       expect(response).to have_http_status(200)
       expect(updated_friend.age).to eq 3
     end
@@ -94,14 +88,8 @@ RSpec.describe "Friends", type: :request do
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
       friend=Friend.first
-    
       delete "/friends/#{friend.id}"
-
       friends = Friend.all
-
-      
-
-      
       expect(response).to have_http_status(200)
       expect(friends.length).to eq 0
     end
