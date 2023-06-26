@@ -43,7 +43,7 @@ RSpec.describe "Friends", type: :request do
       expect(friend.name).to eq 'Felix'
     end
   end
-  describe "PATCH /create" do
+  describe "PATCH /update" do
     it "updates a friend" do
       Friend.create(
         name: 'Felix',
