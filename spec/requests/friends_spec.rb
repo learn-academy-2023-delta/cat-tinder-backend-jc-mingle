@@ -43,6 +43,7 @@ RSpec.describe "Friends", type: :request do
       expect(friend.name).to eq 'Felix'
     end
   end
+
   describe "PATCH /update" do
     it "updates a friend" do
       Friend.create(
@@ -75,6 +76,7 @@ RSpec.describe "Friends", type: :request do
       expect(updated_friend.age).to eq 3
     end
   end
+
   describe "DElETE /destroy" do
     it "deletes a friend" do
       Friend.create(
@@ -94,23 +96,65 @@ RSpec.describe "Friends", type: :request do
       expect(friends.length).to eq 0
     end
   end
-
-  it "doesn't create a friend with activities shorter than 10 characters" do
-    friend_params = {
-      friend: {
-        name: 'Someone',
-        species: 'Tiger',
-        age: 2,
-        personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
-        activities: 'Long',
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+#####################################################
+#API Validations
+  describe "cannot create a friend without valid attributes"
+    it "doesn't create a friend with activities shorter than 10 characters" do
+      friend_params = {
+        friend: {
+          name: 'Someone',
+          species: 'Tiger',
+          age: 2,
+          personality: 'quiet',
+          size: 'large',
+          diet: 'meat',
+          activities: 'Long',
+          img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+        }
       }
-    }
-    post '/friends', params: friend_params
-    expect(response.status).to eq 422
-    json = JSON.parse(response.body)
-    expect(json['activities']).to include "is too short (minimum is 10 characters)"
-  end
+      #sends request to the server adn passes friend_params
+      post '/friends', params: friend_params
+      #expects an error if friend_params is shorter than 10 characters
+      expect(response.status).to eq 422
+      #these two lines are only needed if you need a more specific error response
+      json = JSON.parse(response.body)
+      expect(json['activities']).to include "is too short (minimum is 10 characters)"
+    end
+    
+    describe "cannot update a friend without valid attributes"
+    it "cannot update a friend without a name" do
+      friend_params = {
+        friend: {
+          name: 'Felix',
+          species: 'Tiger',
+          age: 2,
+          personality: 'quiet',
+          size: 'large',
+          diet: 'meat',
+          activities: 'Long naps on the couch, and a warm fire.',
+          img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+        }
+      }
+      post '/friends', params: friend_params
+      friend = Friend.first
+
+      updated_friend_params = {
+        friend: {
+          name: '',
+          species: 'Tiger',
+          age: 2,
+          personality: 'quiet',
+          size: 'large',
+          diet: 'meat',
+          activities: 'Long naps on the couch, and a warm fire.',
+          img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+        }
+      }
+      
+      patch "/friends/#{friend.id}", params: updated_friend_params
+
+      json = JSON.parse(response.body)
+      expect(response).to have_http_status 422
+      expect(json['name']).to include "can't be blank"
+    end
 end
