@@ -98,7 +98,7 @@ RSpec.describe "Friends", type: :request do
   end
 #####################################################
 #API Validations
-  describe "cannot create a friend without valid attributes"
+  describe "cannot create a friend without valid attributes" do
     it "doesn't create a friend with activities shorter than 10 characters" do
       friend_params = {
         friend: {
@@ -120,8 +120,9 @@ RSpec.describe "Friends", type: :request do
       json = JSON.parse(response.body)
       expect(json['activities']).to include "is too short (minimum is 10 characters)"
     end
-    
-    describe "cannot update a friend without valid attributes"
+  end
+
+    describe "cannot update a friend without valid attributes" do
     it "cannot update a friend without a name" do
       friend_params = {
         friend: {
@@ -157,4 +158,5 @@ RSpec.describe "Friends", type: :request do
       expect(response).to have_http_status 422
       expect(json['name']).to include "can't be blank"
     end
+  end
 end
