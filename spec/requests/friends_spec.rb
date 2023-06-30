@@ -8,8 +8,7 @@ RSpec.describe "Friends", type: :request do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 11,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -30,8 +29,7 @@ RSpec.describe "Friends", type: :request do
           species: 'Tiger',
           age: 2,
           personality: 'quiet',
-          size: 'large',
-          diet: 'meat',
+          size: 10,
           activities: 'Long naps on the couch, and a warm fire.',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
         }
@@ -51,8 +49,7 @@ RSpec.describe "Friends", type: :request do
         species: 'Tiger',
         age: 1,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -62,8 +59,7 @@ RSpec.describe "Friends", type: :request do
           species: 'Tiger',
           age: 3,
           personality: 'quiet',
-          size: 'large',
-          diet: 'meat',
+          size: 12,
           activities: 'Long naps on the couch, and a warm fire.',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
         }
@@ -84,8 +80,7 @@ RSpec.describe "Friends", type: :request do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 8,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -106,8 +101,7 @@ RSpec.describe "Friends", type: :request do
           species: 'Tiger',
           age: 2,
           personality: 'quiet',
-          size: 'large',
-          diet: 'meat',
+          size: 10,
           activities: 'Long',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
         }
@@ -130,8 +124,7 @@ RSpec.describe "Friends", type: :request do
           species: 'Tiger',
           age: 2,
           personality: 'quiet',
-          size: 'large',
-          diet: 'meat',
+          size: 10,
           activities: 'Long naps on the couch, and a warm fire.',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
         }
@@ -145,8 +138,7 @@ RSpec.describe "Friends", type: :request do
           species: 'Tiger',
           age: 2,
           personality: 'quiet',
-          size: 'large',
-          diet: 'meat',
+          size: 10,
           activities: 'Long naps on the couch, and a warm fire.',
           img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
         }

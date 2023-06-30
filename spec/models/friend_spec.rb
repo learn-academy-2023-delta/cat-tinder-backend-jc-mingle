@@ -17,8 +17,7 @@ RSpec.describe Friend, type: :model do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -30,8 +29,7 @@ RSpec.describe Friend, type: :model do
         name: 'Felix',
         species: 'Tiger',
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -44,24 +42,11 @@ RSpec.describe Friend, type: :model do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        diet: 'meat',
+      
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
     expect(friend.errors[:size]).to_not be_empty
-  end
-
-  it "should validate diet" do
-    friend = Friend.create(
-        name: 'Felix',
-        species: 'Tiger',
-        age: 2,
-        personality: 'quiet',
-        size: 'large',
-        activities: 'Long naps on the couch, and a warm fire.',
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
-      )
-    expect(friend.errors[:diet]).to_not be_empty
   end
 
   it "should validate activities" do
@@ -70,8 +55,7 @@ RSpec.describe Friend, type: :model do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
     expect(friend.errors[:activities]).to_not be_empty
@@ -82,8 +66,7 @@ RSpec.describe Friend, type: :model do
         name: 'Felix',
         species: 'Tiger',
         age: 2,
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -96,8 +79,7 @@ RSpec.describe Friend, type: :model do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         activities: 'Long naps on the couch, and a warm fire.',
       )
     expect(friend.errors[:img]).to_not be_empty
@@ -108,8 +90,7 @@ RSpec.describe Friend, type: :model do
         name: 'Felix',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         activities: 'Long naps on the couch, and a warm fire.',
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
@@ -122,8 +103,7 @@ RSpec.describe Friend, type: :model do
         species: 'Tiger',
         age: 2,
         personality: 'quiet',
-        size: 'large',
-        diet: 'meat',
+        size: 10,
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
       )
     expect(friend.errors[:activities]).to_not be_empty
