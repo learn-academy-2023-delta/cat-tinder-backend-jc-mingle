@@ -5,33 +5,50 @@
 
 friends = [
   {
-    name: 'Felix',
-    species: 'Tiger',
-    age: 2,
-    personality: 'quiet',
-    size: 5,
-    activities: 'Long naps on the couch, and a warm fire.',
-    img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.worldwildlife.org%2Fspecies%2Ftiger&psig=AOvVaw3K1CpiMMkUwHoiC_DGB-hU&ust=1687890947546000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCK0fXJ4f8CFQAAAAAdAAAAABAD'
+    name: 'Ruby Mable',
+    species: 'Red Maple',
+    age: 14,
+    personality: "I'm calm and love quiet winter nights when you can see the stars",
+    size: 40,
+    activities: 'Playing in the snow',
+    img: 'https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?ixlib=rb-4.0.3&ixid=M3wxM[…]dlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80'
   },
   {
-    name: 'Roudy',
-    species: 'Anteater',
+    name: 'Deb Shoch',
+    species: 'Red Oak',
     age: 4,
-    personality: 'Rambunctious',
+    personality: "I'm Rambunctious country tree and love to dye my hair.",
     size: 12,
-    activities: 'Licking things.',
-    img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fnationalzoo%2F5333631633&psig=AOvVaw2EbrVYOOxOcW1-rqbW5KJJ&ust=1687890900471000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOjDj-HJ4f8CFQAAAAAdAAAAABAD'
+    activities: 'Picnics, afternoon naps',
+    img: 'https://images.unsplash.com/photo-1604820849194-837928614a4a?ixlib=rb-4.0.3&ixid=M3wxM[…]dlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80'
   },
   {
-    name: 'Nari',
-    species: 'Cat',
+    name: 'Ruger Shyne',
+    species: 'Sugar Pine',
     age: 9,
-    personality: 'Standoff-ish',
+    personality: "I'm calm and stoic. I love to be near water",
     size: 16,
-    activities: 'Likes to cuddle quiet dogs.',
-    img: 'https://static.scientificamerican.com/sciam/cache/file/F766A67E-A8AA-4C90-A929C9AC67075D4B_source.jpg?w=390&h=520&8027B6C0-FF94-49F8-B44F07788CEF1BE1'
+    activities: 'Bird watching',
+    img: 'https://images.unsplash.com/photo-1421790500381-fc9b5996f343?ixlib=rb-4.0.3&ixid=M3wxM[…]WdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'
   },
-  
+  {
+    name: 'Jenny Pier',
+    species: 'Juniper',
+    age: 15,
+    personality: "I live on the edge and love a good adrenaline rush",
+    size: 14,
+    activities: 'Bird watching',
+    img: 'https://images.unsplash.com/photo-1559313506-55cc3d498cba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80'
+  },
+  {
+    name: "Saul D'Stiefless",
+    species: 'Bald Cyprus',
+    age: 60,
+    personality: "I love to relax and dip my toes in the water, with a gentle breeze",
+    size: 70,
+    activities: 'Drinking',
+    img: 'https://images.unsplash.com/photo-1502394202744-021cfbb17454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1283&q=80'
+  },
 ]
 
 friends.each do |each_friend|
