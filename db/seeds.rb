@@ -46,8 +46,8 @@ friends = [
     age: 60,
     personality: "I love to relax and dip my toes in the water, with a gentle breeze",
     size: 70,
-    activities: 'Drinking',
-    img: 'https://images.unsplash.com/photo-1502394202744-021cfbb17454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1283&q=80'
+    activities: 'Drinking, Bathing',
+    img: 'https://images.unsplash.com/photo-1603207283746-f8ddb7f47bcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'
   },
 ]
 
